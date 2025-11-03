@@ -1,0 +1,324 @@
+/* ----------------------------------------------------
+   🎨 COFFEE PAGE — Responsive Redesign (Asghar Ali)
+   Pure CSS | No frameworks | Fully responsive
+---------------------------------------------------- */
+
+/* ---------- Imports ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@400;600;800&display=swap');
+
+/* ---------- Base Styles ---------- */
+:root {
+  --main-color: coral;
+  --primary-color: white;
+  --bg-dark: #100e0ff6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--primary-color);
+  font-family: "Playfair", serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ---------- Navbar ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.2rem 5%;
+  background: rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Playfair Display SC", serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--primary-color);
+  cursor: default;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--main-color);
+  text-decoration: overline;
+}
+
+/* ---------- Hero Section ---------- */
+header {
+  min-height: 100vh;
+  background: url("pics/4.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 5%;
+  text-shadow: 0 0 6px black;
+}
+
+header h1 {
+  font-family: "Playfair Display SC", serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  max-width: 600px;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: wheat;
+  margin: 1rem 0 2rem 0;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: black;
+  color: var(--main-color);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 10px var(--main-color);
+}
+
+/* ---------- Our Story Section ---------- */
+#ourStory {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem 5%;
+}
+
+#ourStory .img {
+  flex: 1 1 350px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: url("pics/2.jpg") center/cover no-repeat;
+}
+
+.section-content {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.title {
+  font-family: "Playfair Display SC", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.section-content p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: rgba(255, 255, 200, 0.8);
+  margin-bottom: 2rem;
+}
+
+/* ---------- Coffee Section ---------- */
+.coffee-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 5rem 5%;
+}
+
+.content-section {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.title-two {
+  font-family: "Playfair Display SC", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.content-section p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: rgba(255, 255, 200, 0.8);
+  margin-bottom: 2rem;
+}
+
+.img-2 {
+  flex: 1 1 350px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* ---------- Products Section ---------- */
+.products {
+  padding: 5rem 5%;
+  text-align: center;
+}
+
+.products h1 {
+  font-family: "Playfair Display SC", serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--main-color);
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.card {
+  background: rgba(55, 50, 50, 0.75);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(55, 50, 50, 0.9);
+}
+
+.card h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 1rem 0;
+  color: wheat;
+}
+
+.card .items p {
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin: 0.5rem 0;
+}
+
+.card img,
+.card .card-img-1,
+.card .card-img-2,
+.card .card-img-3 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+  margin: 0 auto 1.5rem auto;
+  background-position: center;
+  background-size: cover;
+}
+
+.card .card-img-1 {
+  background-image: url("pics/2.jpg");
+}
+.card .card-img-2 {
+  background-image: url("pics/3.jpg");
+}
+.card .card-img-3 {
+  background-image: url("pics/4.jpg");
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 5rem 5% 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footerData {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footerData > div {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.footerData h1 {
+  font-family: "Playfair Display SC", serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.footerData span {
+  color: var(--main-color);
+}
+
+.footerData p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.footer-social a {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ffeb3b;
+  transform: scale(1.2);
+}
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 768px) {
+  header {
+    align-items: center;
+    text-align: center;
+  }
+  header h1 {
+    text-shadow: none;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .footer-social {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
